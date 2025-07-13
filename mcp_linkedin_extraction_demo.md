@@ -1,13 +1,32 @@
-# LinkedIn Post Extraction with MCP + Stagehand
+# LinkedIn Post Extraction with CrewAI Framework + Weave Observability
 
 ## Overview
 
-This demonstrates how to use Browserbase + Stagehand MCP servers with CrewAI for intelligent LinkedIn post extraction using natural language instructions.
+This demonstrates how to use **CrewAI framework** with **Exa enrichment** and **Weights & Biases Weave** for complete observability of intelligent LinkedIn post extraction. The system uses Browserbase + Stagehand MCP servers for browser automation with natural language instructions.
+
+## Key Frameworks
+
+### 🤖 **CrewAI Framework**
+- Multi-agent AI framework for complex workflows
+- Orchestrates 5 specialized agents for LinkedIn intelligence
+- Sequential task execution with shared context
+
+### 🔍 **Exa for Enrichment** 
+- Company research and competitive intelligence
+- Real-time web search for profile enrichment
+- Market insights and business context gathering
+
+### 📊 **Weights & Biases Weave**
+- Complete pipeline observability and tracing
+- Real-time performance monitoring and optimization
+- Enterprise-grade analytics and reporting
 
 ## Architecture
 
 ```
-CrewAI Agent → MCP Tools → Stagehand → Browserbase Context → LinkedIn
+CrewAI Framework → Exa Enrichment → MCP Tools → Stagehand → Browserbase Context → LinkedIn
+                     ↓                                                                       
+              W&B Weave Observability (Complete Tracing & Analytics)
 ```
 
 ## Available MCP Tools
@@ -131,7 +150,7 @@ source ~/.zshrc  # Reload with updated yolo command
 yolo  # Now includes browserbase + stagehand MCP servers
 ```
 
-### Available Tools in Claude Code:
+### Available Tools in AI Assistant:
 - `stagehand_navigate` - Navigate to URLs
 - `stagehand_act` - Perform actions with natural language  
 - `stagehand_extract` - Extract data with JSON schemas
@@ -156,7 +175,7 @@ CONTEXT_ID=b03b0494-a12d-4e4c-b99f-59651591529e
 ## Ready to Test!
 
 The MCP + Stagehand setup is complete. You can now:
-1. Run `yolo` to start Claude Code with MCP servers
+1. Run `yolo` to start AI Assistant with MCP servers
 2. Use natural language to extract LinkedIn posts
 3. Build CrewAI agents with MCP tools
 4. Leverage the persistent Browserbase Context for instant access

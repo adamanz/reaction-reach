@@ -1,0 +1,104 @@
+# LinkedIn Reaction Reach Tasks Configuration
+
+extract_reactions_task:
+  description: >
+    Navigate to LinkedIn notifications page and extract all reactions from the most recent post.
+    Use the Browserbase context ID {context_id} for authenticated access.
+    Capture detailed information about each reactor including:
+    - Full name
+    - Job title and company
+    - LinkedIn profile URL
+    - Connection degree (1st, 2nd, 3rd)
+    - Any additional context from their profile
+    
+    Ensure stealth operation to avoid detection and handle any pagination if there
+    are many reactions. Take screenshots for verification.
+  expected_output: >
+    A JSON report containing:
+    - Total number of reactions extracted
+    - List of all reactors with their profile information
+    - Screenshots of the extraction process
+    - Timestamp of extraction
+    - Any errors or issues encountered
+  agent: linkedin_extractor
+
+enrich_emails_task:
+  description: >
+    Take the extracted LinkedIn profiles and enrich them with email addresses using Apollo.io.
+    For each profile:
+    - Search for their professional email address
+    - Gather additional data like company details, seniority, location
+    - Note email verification status
+    - Track which profiles have emails vs those that don't
+    
+    Optimize API calls to stay within rate limits and maximize data quality.
+    Prioritize 1st-degree connections and those from relevant companies.
+  expected_output: >
+    An enriched dataset in JSON format containing:
+    - Original LinkedIn profile data
+    - Email addresses (where found)
+    - Email verification status
+    - Additional enrichment data (company size, industry, etc.)
+    - Summary statistics (emails found vs not found)
+    - Enrichment timestamp
+  agent: apollo_enricher
+  context:
+    - extract_reactions_task
+
+analyze_outreach_task:
+  description: >
+    Analyze the enriched reaction data to create personalized outreach strategies.
+    Consider:
+    - Connection degree and relationship strength
+    - Professional background and current role
+    - Company information and potential business fit
+    - Engagement context (which post they reacted to)
+    
+    Segment contacts into priority tiers:
+    - Tier 1: High-value prospects with verified emails
+    - Tier 2: Interesting prospects needing more research
+    - Tier 3: General network connections
+    
+    Create personalized talking points for each tier based on their profile.
+  expected_output: >
+    A strategic outreach plan containing:
+    - Contact segmentation by priority tiers
+    - Personalized outreach angles for each contact
+    - Recommended follow-up sequence
+    - Email templates customized by tier
+    - Key talking points based on their background
+    - Timing recommendations for outreach
+  agent: outreach_strategist
+  context:
+    - extract_reactions_task
+    - enrich_emails_task
+
+generate_report_task:
+  description: >
+    Create a comprehensive report summarizing the entire LinkedIn reaction extraction
+    and enrichment process. Include:
+    - Executive summary with key metrics
+    - Detailed breakdown of reactions by connection degree
+    - Email enrichment success rates
+    - Top prospects identified with contact information
+    - Visualizations of engagement patterns
+    - Actionable recommendations for follow-up
+    - ROI analysis of the extraction effort
+    
+    Format the report in markdown for easy sharing and include all relevant
+    data files as appendices.
+  expected_output: >
+    A complete markdown report including:
+    - Executive summary (1 page)
+    - Detailed findings with statistics
+    - Prospect profiles with enriched data
+    - Outreach strategy recommendations
+    - Visual charts and graphs
+    - Appendices with raw data
+    - Next steps and timeline
+  agent: report_generator
+  context:
+    - extract_reactions_task
+    - enrich_emails_task
+    - analyze_outreach_task
+  output_file: output/linkedin_reactions_report.md

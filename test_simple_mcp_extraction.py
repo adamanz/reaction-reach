@@ -179,7 +179,7 @@ def show_mcp_integration_guide():
 1. **Test your yolo MCP setup**:
    ```bash
    yolo
-   # In Claude Code interface, try:
+   # In AI Assistant interface, try:
    # "Use stagehand to navigate to linkedin.com/in/adamanz"
    ```
 

@@ -1,0 +1,36 @@
+# src/reaction_reach_v2/config/tasks.yaml
+navigate_task:
+  description: >
+    Use Stagehand MCP tools to navigate to LinkedIn notifications page at 
+    https://www.linkedin.com/notifications/?filter=my_posts_all. Use stagehand_navigate 
+    to go to the page, then use stagehand_observe to identify the most recent post.
+    Use stagehand_act to click on the most recent post to open it.
+  expected_output: >
+    Confirmation that LinkedIn session is established, most recent post is identified,
+    and the post is opened for reaction analysis
+  agent: linkedin_navigator
+
+analyze_task:
+  description: >
+    Use Stagehand MCP tools to extract reactions from the opened LinkedIn post. 
+    Use stagehand_act to click on the reactions area to expand the reactions modal.
+    Use stagehand_extract to gather all reactor profile data including names, titles,
+    companies, and LinkedIn URLs. Then use Apollo MCP tools (people_enrichment) to 
+    enrich each profile with email addresses and additional professional information.
+  expected_output: >
+    A comprehensive JSON dataset containing all reactor profiles with names, titles, 
+    companies, profile URLs, connection degrees, AND enriched email addresses from Apollo.io
+  agent: post_analyzer
+
+report_task:
+  description: >
+    Create a comprehensive business intelligence report analyzing the enriched LinkedIn 
+    reactions data. Include email addresses found, engagement patterns, top companies, 
+    and connection distribution. Use Gmail MCP tools to create personalized draft emails
+    for each reactor with an email address. Generate both the intelligence report and
+    email outreach summary.
+  expected_output: >
+    A detailed markdown report with executive summary, key findings, demographics breakdown,
+    email enrichment results, and confirmation that Gmail drafts have been created for outreach
+  agent: intelligence_reporter
+  output_file: linkedin_intelligence_report.md

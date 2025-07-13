@@ -78,10 +78,10 @@ To properly test this system, you would run:
 # 1. Reload shell with updated yolo command
 source ~/.zshrc
 
-# 2. Start Claude Code with MCP servers  
+# 2. Start AI Assistant with MCP servers  
 yolo
 
-# 3. In the new Claude Code session, test tools:
+# 3. In the new AI Assistant session, test tools:
 ```
 
 **Step 1: Navigate to LinkedIn Activity Page**
@@ -182,7 +182,7 @@ All infrastructure is properly configured and ready for testing:
 To execute the actual LinkedIn post extraction:
 
 ```bash
-# Step 1: Start new Claude Code session with MCP servers
+# Step 1: Start new AI Assistant session with MCP servers
 source ~/.zshrc && yolo
 
 # Step 2: In the new session, you'll have access to these tools:
@@ -215,7 +215,7 @@ When properly executed, this should:
 The test validates this architecture:
 
 ```
-User Command → Claude Code → MCP Tools → Stagehand AI → Browserbase → LinkedIn
+User Command → AI Assistant → MCP Tools → Stagehand AI → Browserbase → LinkedIn
 ```
 
 **Key validations:**
@@ -232,6 +232,6 @@ User Command → Claude Code → MCP Tools → Stagehand AI → Browserbase → 
 **Platform**: macOS Darwin 24.5.0  
 **Node.js**: 18+  
 **Python**: 3.13 (virtual environment available)  
-**Claude Code**: Latest with MCP support  
+**AI Assistant**: Latest with MCP support  
 **Browserbase**: Enterprise stealth proxy enabled  
 **LinkedIn Context**: Persistent authentication configured

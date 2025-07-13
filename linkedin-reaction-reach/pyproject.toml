@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "linkedin-reaction-reach"
+version = "1.0.0"
+description = "CrewAI implementation for extracting LinkedIn reactions and enriching with emails"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+crewai = "^0.141.0"
+crewai-tools = "^0.51.0"
+python-dotenv = "^1.0.0"
+browserbase = "^0.3.0"
+playwright = "^1.40.0"
+openai = "^1.35.0"
+requests = "^2.31.0"
+pydantic = "^2.5.0"
+
+[tool.poetry.scripts]
+linkedin-reaction-reach = "linkedin_reaction_reach.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

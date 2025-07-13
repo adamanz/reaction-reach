@@ -295,7 +295,7 @@ def optimize_agent_performance():
     configs = [
         {"model": "gpt-4o", "temperature": 0.1},
         {"model": "gpt-4o-mini", "temperature": 0.0},
-        {"model": "claude-3-sonnet", "temperature": 0.1}
+        {"model": "gpt-4o", "temperature": 0.1}
     ]
     
     for config in configs:

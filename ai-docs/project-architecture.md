@@ -187,7 +187,7 @@ ReactionReach/
 │   │   ├── tasks.yaml           # Task definitions
 │   │   └── settings.py          # Application settings
 │   └── main.py                  # Entry point
-├── ai-docs/                     # Documentation for Claude
+├── ai-docs/                     # Documentation for AI Assistant
 ├── data/                        # Output directory
 ├── tests/                       # Test suites
 └── config/                      # Configuration files
