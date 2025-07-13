@@ -1,0 +1,63 @@
+navigate_to_post_task:
+  description: >
+    Navigate to LinkedIn and find the most recent post with reactions:
+    1. Use the LinkedIn Browser Tool to navigate to https://www.linkedin.com/notifications/?filter=my_posts_all
+    2. Wait for the page to fully load
+    3. Use the 'act' command to click on the first post notification link
+    4. Confirm you've navigated to the actual post page
+  expected_output: >
+    Confirmation that you've successfully navigated to a LinkedIn post page
+    with the post URL and a brief description of what you see
+  agent: navigator
+
+open_reactions_task:
+  description: >
+    Open the reactions modal for the current post:
+    1. Use the LinkedIn Browser Tool with 'observe' command to find the reactions area
+       (look for elements with text like "and X others" or reaction counts)
+    2. Use the 'act' command to click on the reactions area to open the modal
+    3. Wait for the modal to fully load (should contain list of reactors)
+    4. Confirm the reactions modal is open and visible
+  expected_output: >
+    Confirmation that the reactions modal is open with the number of
+    visible reactor profiles
+  agent: navigator
+
+extract_reactions_task:
+  description: >
+    Extract all reactor profiles from the open reactions modal:
+    1. Use the LinkedIn Browser Tool with 'extract' command to get reactor data
+    2. Use this instruction: "Extract all reactor profiles including their names,
+       job titles, companies, connection degrees (1st, 2nd, 3rd), and profile URLs"
+    3. The extracted data should follow this schema:
+       {
+         "reactors": [
+           {
+             "name": "string",
+             "title": "string", 
+             "company": "string",
+             "connection_degree": "string",
+             "profile_url": "string"
+           }
+         ]
+       }
+    4. Handle missing fields by using "N/A"
+  expected_output: >
+    A JSON structure containing all extracted reactor profiles with
+    their complete information
+  agent: extractor
+
+generate_report_task:
+  description: >
+    Generate a comprehensive report from the extracted reactor data:
+    1. Create a summary with total reactor count
+    2. List all reactor profiles with their details
+    3. Generate statistics including:
+       - Top companies (with counts)
+       - Connection degree distribution
+       - Any notable patterns or insights
+    4. Format as a clean Markdown report
+  expected_output: >
+    A complete Markdown report with reactor profiles, statistics,
+    and insights formatted for easy reading
+  agent: reporter

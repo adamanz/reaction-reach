@@ -11,5 +11,9 @@ openai>=1.13.3
 # Environment & Configuration
 python-dotenv>=1.0.0
 
+# Gmail MCP Integration (optional)
+# For automatic email drafting functionality
+# Install separately: npm install -g @gongrzhe/server-gmail-autoauth-mcp
+
 # Development & Testing (optional)
 pytest>=7.0.0

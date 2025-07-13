@@ -1,0 +1,23 @@
+# LinkedIn Reactions Extractor - CrewAI Version Requirements
+
+# CrewAI Framework (Latest versions as of Jan 2025)
+crewai==0.134.0
+crewai-tools==0.48.0
+
+# Browser Automation via Browserbase/Stagehand
+stagehand-py>=0.1.0
+browserbase>=1.4.0
+
+# LLM Integration
+openai>=1.13.3
+
+# Environment & Configuration
+python-dotenv>=1.0.0
+
+# Additional Dependencies (auto-installed by CrewAI)
+# - langchain
+# - pydantic>=2.4.2
+# - litellm==1.72.0
+# - instructor>=1.3.3
+# - chromadb>=0.5.23
+# - click>=8.1.7

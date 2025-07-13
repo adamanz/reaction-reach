@@ -4,6 +4,59 @@
 
 Automatically extracts detailed profile information from people who react to your most recent LinkedIn post, including names, titles, companies, connection degrees, and profile URLs.
 
+## 🔄 How It Works
+
+```
+┌─────────────────────┐
+│   Your Computer     │
+│  ┌───────────────┐  │
+│  │ Python Script │  │
+│  └───────┬───────┘  │
+│          │          │
+└──────────┼──────────┘
+           │
+           ├─────────────────────────────────────┐
+           │                                     │
+           ▼                                     ▼
+┌─────────────────────┐              ┌─────────────────────┐
+│   Browserbase API   │              │    OpenAI API       │
+│  ┌───────────────┐  │              │  ┌───────────────┐  │
+│  │ Cloud Browser │  │              │  │   GPT-4o      │  │
+│  │   Session     │  │              │  │   Analysis    │  │
+│  └───────┬───────┘  │              │  └───────┬───────┘  │
+│          │          │              │          │          │
+└──────────┼──────────┘              └──────────┼──────────┘
+           │                                     │
+           ▼                                     │
+┌─────────────────────┐                         │
+│     LinkedIn        │ ◄───────────────────────┘
+│  ┌───────────────┐  │     AI-Powered Navigation
+│  │ Notifications │  │
+│  │      ↓        │  │
+│  │  Recent Post  │  │
+│  │      ↓        │  │
+│  │   Reactions   │  │
+│  │    Modal      │  │
+│  └───────────────┘  │
+└─────────────────────┘
+           │
+           ▼
+┌─────────────────────┐
+│   Data Extraction   │
+│  ┌───────────────┐  │
+│  │ Profile Names │  │
+│  │    Titles     │  │
+│  │   Companies   │  │
+│  │  Connections  │  │
+│  │  Profile URLs │  │
+│  └───────────────┘  │
+└─────────────────────┘
+           │
+           ├──────────────┬──────────────┐
+           ▼              ▼              ▼
+    📄 JSON Data   📝 MD Summary   📸 Screenshots
+```
+
 ## ✨ Features
 
 - **🧠 GPT-4o Intelligence**: Uses GPT-4o to intelligently navigate LinkedIn and find the most recent post
@@ -14,6 +67,7 @@ Automatically extracts detailed profile information from people who react to you
   - Connection degrees (1st, 2nd, 3rd)
   - LinkedIn profile URLs
   - Professional affiliations
+- **📧 Gmail Integration**: Automatically drafts personalized outreach emails using Gmail MCP server
 - **📄 Multiple Output Formats**: Generates both JSON data files and human-readable markdown summaries
 - **📸 Screenshot Documentation**: Captures screenshots at each step for debugging and verification
 
@@ -53,6 +107,12 @@ Automatically extracts detailed profile information from people who react to you
 5. **Install Playwright browsers**
    ```bash
    playwright install
+   ```
+
+6. **Optional: Install Gmail MCP server**
+   ```bash
+   npm install -g @gongrzhe/server-gmail-autoauth-mcp
+   npx @gongrzhe/server-gmail-autoauth-mcp auth
    ```
 
 ### Environment Configuration
@@ -95,9 +155,11 @@ The script will:
 1. **Navigate** to your LinkedIn notifications
 2. **Identify** your most recent post using GPT-4o intelligence  
 3. **Extract** detailed reactor profiles
-4. **Generate** output files:
+4. **Draft emails** (if Gmail MCP is configured)
+5. **Generate** output files:
    - `reactions_data_[timestamp].json` - Raw structured data
    - `reactions_summary_[timestamp].md` - Human-readable report
+   - `gmail_outreach_summary_[timestamp].md` - Email drafting report
    - Screenshots for verification
 
 ### Sample Output
@@ -115,6 +177,12 @@ The script will:
 ✅ Successfully extracted 9 reactor profiles!
 💾 Data saved to: reactions_data_1752374826.json
 📄 Summary report created: reactions_summary_1752374826.md
+
+📧 Starting Gmail draft creation...
+📧 Found 9 valid contacts for email drafting
+✅ Gmail integration complete!
+📊 Created 9 draft emails
+📄 Summary report saved: gmail_outreach_summary_1752374826.md
 
 🏁 RESULT: SUCCESS ✅
 ```

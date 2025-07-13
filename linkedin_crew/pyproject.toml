@@ -1,0 +1,25 @@
+[project]
+name = "linkedin_crew"
+version = "0.1.0"
+description = "linkedin_crew using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "browserbase>=1.4.0",
+    "crewai[tools]>=0.141.0,<1.0.0",
+    "stagehand-py>=0.3.10",
+]
+
+[project.scripts]
+linkedin_crew = "linkedin_crew.main:run"
+run_crew = "linkedin_crew.main:run"
+train = "linkedin_crew.main:train"
+replay = "linkedin_crew.main:replay"
+test = "linkedin_crew.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

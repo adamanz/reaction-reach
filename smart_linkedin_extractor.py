@@ -15,6 +15,14 @@ import re
 from datetime import datetime
 from collections import Counter
 
+# Import Gmail integration
+try:
+    from gmail_integration import integrate_gmail_with_extractor
+    GMAIL_INTEGRATION_AVAILABLE = True
+except ImportError:
+    print("⚠️ Gmail integration not available. Install required dependencies for email features.")
+    GMAIL_INTEGRATION_AVAILABLE = False
+
 load_dotenv()
 
 # Configure OpenAI to use GPT-4o
@@ -459,6 +467,12 @@ def extract_linkedin_reactions():
                                 
                                 # Create a readable summary
                                 create_reactor_summary(reactor_data, timestamp)
+                                
+                                # Integrate Gmail drafting if available
+                                if GMAIL_INTEGRATION_AVAILABLE:
+                                    print("\n📧 Starting Gmail draft creation...")
+                                    integrate_gmail_with_extractor(reactor_data)
+                                
                                 return True
                             else:
                                 print("⚠️ No reactor data extracted")
