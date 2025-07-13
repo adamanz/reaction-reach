@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "browserbase": {
+      "command": "npx",
+      "args": ["@browserbasehq/mcp"],
+      "env": {
+        "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+        "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}"
+      }
+    },
+    "stagehand": {
+      "command": "node",
+      "args": ["./node_modules/@browserbasehq/mcp-stagehand/dist/index.js"],
+      "env": {
+        "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}",
+        "BROWSERBASE_PROJECT_ID": "${BROWSERBASE_PROJECT_ID}",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "CONTEXT_ID": "${CONTEXT_ID}"
+      }
+    },
+    "messages": {
+      "command": "uv",
+      "args": ["run", "mac-messages-mcp"]
+    },
+    "playwright": {
+      "command": "npx", 
+      "args": ["-y", "@executeautomation/playwright-mcp-server"]
+    },
+    "box": {
+      "command": "uv",
+      "args": ["--directory", "/Users/adamanzuoni/mcp-server-box", "run", "src/mcp_server_box.py"]
+    },
+    "replicate": {
+      "command": "npx",
+      "args": ["-y", "replicate-mcp"],
+      "env": {
+        "REPLICATE_API_TOKEN": "${REPLICATE_API_TOKEN}"
+      }
+    }
+  }
+}

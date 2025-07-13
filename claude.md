@@ -1,5 +1,16 @@
 # ReactionReach CrewAI Setup Analysis
 
+## 🎯 Key Integration: Browserbase Contexts
+
+**IMPORTANT**: We now use **Browserbase Contexts** instead of file-based cookie storage for LinkedIn authentication. This provides:
+
+✅ **Persistent authentication** across sessions  
+✅ **Encrypted browser state** storage  
+✅ **Reduced bot detection** with consistent fingerprints  
+✅ **Faster automation** with cached data  
+
+See `BROWSERBASE_CONTEXTS.md` for full implementation details.
+
 ## Crew Architecture Overview
 
 Based on the spec.md, ReactionReach uses a **sequential 5-agent pipeline** for LinkedIn intelligence gathering:
@@ -160,3 +171,102 @@ python src/main.py --profile "https://linkedin.com/in/username" --days 30 --max-
 4. **Run analysis**: `python src/main.py "your_linkedin_profile_url"`
 
 The implementation follows the exact same pattern as the flight booking tutorial but for LinkedIn intelligence gathering instead of flight searches!
+
+# Weave Integration
+
+> Learn how to use Weights & Biases (W&B) Weave to track, experiment with, evaluate, and improve your CrewAI applications.
+
+## 🎯 Critical Observability for LinkedIn Intelligence
+
+ReactionReach requires **enterprise-grade observability** to ensure:
+- ✅ **Stealth Operation Success**: Monitor detection avoidance in real-time
+- ✅ **Rate Limiting Compliance**: Track request patterns and delays  
+- ✅ **Data Quality Assurance**: Verify extraction completeness and accuracy
+- ✅ **Performance Optimization**: Identify bottlenecks in the 5-agent pipeline
+
+## 🚀 Quick Weave Setup
+
+### 1. Install Dependencies
+```bash
+pip install crewai weave wandb
+```
+
+### 2. Initialize Tracking
+```python
+import weave
+weave.init(project_name="reaction-reach-linkedin-intelligence")
+
+# Your CrewAI code gets automatic tracking!
+crew = create_reaction_reach_crew(profile_url, days_back=30)
+result = crew.kickoff()
+```
+
+### 3. Enhanced Execution with W&B
+```bash
+# Run with comprehensive tracking
+python src/main_with_wandb.py "https://linkedin.com/in/your-profile"
+
+# View dashboard at: https://wandb.ai/your-username/reaction-reach
+```
+
+## 📊 What Gets Tracked Automatically
+
+### **CrewAI Pipeline Tracking**
+- 🤖 **Agent Performance**: Each agent's execution time and success rates
+- 📋 **Task Flow**: Sequential dependencies and context passing
+- 💬 **LLM Operations**: Model calls, token usage, costs, latency
+- 🛠️ **Tool Usage**: Browserbase automation and LinkedIn interactions
+
+### **LinkedIn-Specific Metrics**
+- 🔍 **Navigation Success**: Profile access and authentication rates
+- 📈 **Post Discovery**: Discovery efficiency and content quality
+- 💡 **Reaction Extraction**: Extraction speed and data completeness
+- 📊 **Intelligence Quality**: Insights generated and actionable recommendations
+
+### **Compliance & Safety Tracking**
+- ⏱️ **Rate Limiting**: Delay compliance and human-like behavior
+- 🛡️ **Stealth Monitoring**: Detection avoidance and session health
+- 🚨 **Error Recovery**: Graceful failure handling and debug info
+- 📋 **Performance KPIs**: Success rates, costs, and optimization metrics
+
+## 🎛️ Key Dashboard Views
+
+### Executive Overview
+```
+📊 ReactionReach Intelligence Dashboard
+├── 🎯 Success Rate: 94% (47/50 posts analyzed)
+├── ⏱️ Total Time: 23.7 minutes  
+├── 💰 LLM Cost: $0.47
+├── 🔍 Reactions Found: 1,247 total
+└── 💡 Insights Generated: 23 actionable recommendations
+```
+
+### Agent Performance
+```
+🤖 5-Agent Pipeline Efficiency
+├── Navigator (2.3 min): ✅ Authentication successful
+├── Post Hunter (8.1 min): ✅ 47/50 posts discovered (94%)
+├── Harvester (11.2 min): ✅ 1,247 reactions extracted
+├── Analyst (1.8 min): ✅ Patterns identified  
+└── Reporter (0.3 min): ✅ Report generated
+```
+
+### LinkedIn Automation Health
+```
+🕵️ Stealth Operation Status
+├── 🛡️ Detection Avoided: ✅ No blocking events
+├── ⏱️ Rate Limiting: ✅ 2-5s delays maintained
+├── 🔄 Session Health: ✅ No rotation required
+└── 📊 Request Pattern: ✅ Human-like behavior
+```
+
+## 📈 Enterprise Benefits
+
+- **📊 Real-time Monitoring**: Track LinkedIn automation as it happens
+- **🔧 Performance Optimization**: Identify slow agents and bottlenecks
+- **🛡️ Compliance Tracking**: Monitor rate limiting and stealth effectiveness  
+- **📈 A/B Testing**: Compare different profiles and strategies
+- **🚨 Error Tracking**: Detailed error logs with context
+- **📋 Historical Analysis**: Track improvements over time
+
+**Detailed Implementation**: See `ai-docs/observability-weave.md` for complete setup guide, custom metrics, and dashboard configuration.

@@ -1,0 +1,6 @@
+# Simplified dependencies for testing
+crewai
+crewai[tools]
+playwright
+html2text
+python-dotenv

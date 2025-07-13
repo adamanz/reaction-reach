@@ -5,6 +5,10 @@
 crewai>=0.70.0
 crewai[tools]>=0.70.0
 
+# Weights & Biases Integration
+weave>=0.50.0
+wandb>=0.16.0
+
 # Web Automation & Browser Control
 playwright>=1.40.0
 html2text>=2020.1.16

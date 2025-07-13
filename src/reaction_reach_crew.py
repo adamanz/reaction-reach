@@ -1,3 +1,4 @@
+import os
 from crewai import Agent, Crew, Process, Task
 from tools.linkedin_url_builder import linkedin_url_builder
 from tools.browserbase_linkedin import browserbase_linkedin
@@ -6,6 +7,16 @@ from tools.browserbase_linkedin import browserbase_linkedin
 linkedin_navigator_tools = [linkedin_url_builder, browserbase_linkedin]
 post_hunter_tools = [linkedin_url_builder, browserbase_linkedin]
 reaction_harvester_tools = [linkedin_url_builder, browserbase_linkedin]
+
+# Get LLM configuration from environment
+def get_llm_config():
+    """Get LLM configuration from environment variables"""
+    return {
+        "model": os.getenv("OPENAI_MODEL_NAME", "gpt-4o"),
+        "api_key": os.getenv("OPENAI_API_KEY"),
+        "temperature": float(os.getenv("OPENAI_TEMPERATURE", "0.1")),
+        "max_tokens": int(os.getenv("OPENAI_MAX_TOKENS", "4000"))
+    }
 
 # 1. LinkedIn Navigator Agent
 linkedin_navigator_agent = Agent(
@@ -174,6 +185,11 @@ def create_reaction_reach_crew(
         output_file='data/intelligence-report.md'
     )
 
+    # Get model configuration from environment
+    model_name = os.getenv("OPENAI_MODEL_NAME", "gpt-4o")
+    max_rpm = int(os.getenv("CREWAI_MAX_RPM", "30"))
+    verbose = os.getenv("CREWAI_VERBOSE", "true").lower() == "true"
+    
     # Create and return the crew
     crew = Crew(
         agents=[
@@ -193,8 +209,8 @@ def create_reaction_reach_crew(
         process=Process.sequential,  # Tasks run in sequence
         memory=True,  # Enable memory for context sharing
         cache=True,   # Enable caching for efficiency
-        max_rpm=30,   # Conservative rate limiting for LinkedIn
-        verbose=True,
+        max_rpm=max_rpm,   # Rate limiting from .env
+        verbose=verbose,   # Verbose mode from .env
         planning=True
     )
     

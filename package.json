@@ -24,29 +24,30 @@
   "author": "Adam Anzuoni",
   "license": "MIT",
   "dependencies": {
-    "@browserbasehq/stagehand": "^1.0.0",
+    "@browserbasehq/mcp": "^1.0.5",
+    "@browserbasehq/mcp-stagehand": "^0.5.1",
     "@browserbasehq/sdk": "^1.0.0",
-    "crewai": "^1.0.0",
-    "crewai-tools": "^1.0.0",
+    "@browserbasehq/stagehand": "^1.0.0",
+    "commander": "^11.0.0",
     "dotenv": "^16.0.0",
-    "zod": "^3.22.0",
-    "playwright-core": "^1.40.0",
-    "openai": "^4.0.0",
     "fs-extra": "^11.0.0",
-    "commander": "^11.0.0"
+    "openai": "^4.0.0",
+    "playwright-core": "^1.40.0",
+    "shx": "^0.4.0",
+    "zod": "^3.22.0"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
     "@types/fs-extra": "^11.0.0",
-    "typescript": "^5.0.0",
-    "ts-node": "^10.9.0",
-    "jest": "^29.0.0",
     "@types/jest": "^29.0.0",
-    "ts-jest": "^29.0.0",
-    "eslint": "^8.0.0",
+    "@types/node": "^20.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
-    "prettier": "^3.0.0"
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
