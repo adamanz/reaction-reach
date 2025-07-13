@@ -1,0 +1,169 @@
+{
+  "webset": {
+    "id": "webset_01k00sr107byda7a6ac16960cs",
+    "status": "idle",
+    "searches": 2,
+    "enrichments": 4,
+    "createdAt": "2025-07-13T02:27:38.631Z",
+    "metadata": {
+      "target": "Adam Anzuoni",
+      "project": "ContactEnrichment",
+      "purpose": "phone-number-discovery",
+      "requestedBy": "user"
+    }
+  },
+  "searches": [
+    {
+      "id": "wsearch_01k00sr188tsjq2hnz11jydmj0",
+      "query": "Adam Anzuoni phone number contact information professional profile business contact details email address",
+      "status": "canceled",
+      "progress": {
+        "found": 0,
+        "analyzed": 0,
+        "completion": 100,
+        "timeLeft": 0
+      },
+      "criteria": [
+        {
+          "description": "Phone number and direct contact information",
+          "successRate": 0
+        },
+        {
+          "description": "Professional email addresses and business contacts",
+          "successRate": 0
+        },
+        {
+          "description": "LinkedIn profile and social media presence",
+          "successRate": 0
+        },
+        {
+          "description": "Business affiliations and company information",
+          "successRate": 0
+        },
+        {
+          "description": "Professional directory listings and contact databases",
+          "successRate": 0
+        }
+      ]
+    },
+    {
+      "id": "wsearch_01k00sr2nymhx6tqr1vjfv94wd",
+      "query": "\"Adam Anzuoni\" phone number mobile contact telephone business phone work phone",
+      "status": "completed",
+      "progress": {
+        "found": 15,
+        "analyzed": 193,
+        "completion": 100,
+        "timeLeft": 0
+      },
+      "criteria": [
+        {
+          "description": "Direct phone number listings and contact databases",
+          "successRate": 23.96
+        },
+        {
+          "description": "Business directory entries with phone numbers",
+          "successRate": 22.4
+        },
+        {
+          "description": "Professional contact information and phone details",
+          "successRate": 14.58
+        }
+      ]
+    }
+  ],
+  "enrichments": [
+    {
+      "id": "wenrich_cmd1214w90004i00i5lyfmm46",
+      "format": "text",
+      "status": "canceled",
+      "description": "Gather professional contact information including business addresses, LinkedIn profiles, and company affiliations"
+    },
+    {
+      "id": "wenrich_cmd1214w90002i00i491rhwxh",
+      "format": "text",
+      "status": "canceled",
+      "description": "Extract phone numbers including mobile, work, and personal contact numbers"
+    },
+    {
+      "id": "wenrich_cmd1214w90003i00iouvzcq18",
+      "format": "text",
+      "status": "canceled",
+      "description": "Find email addresses including professional and personal email contacts"
+    },
+    {
+      "id": "wenrich_cmd1214w90005i00ipp2o20f2",
+      "format": "text",
+      "status": "completed",
+      "description": "Identify social media profiles and online presence including Twitter, LinkedIn, GitHub, and personal websites"
+    }
+  ],
+  "searchResults": [
+    {
+      "title": "Adam A. - LinkedIn - Clay.earth",
+      "url": "https://clay.earth/profile/adam-anzuoni",
+      "content": "Adam Anzuoni is a seasoned professional with over 15 years of experience in the field of marketing and brand management.\n\nHe holds a Bachelor's degree in Marketing from a reputable university and has completed various certifications in digital marketing.\n\nThroughout his career, Adam has demonstrated expertise in developing successful marketing strategies, managing advertising campaigns, and building strong brand identities.\n\nHe has a proven track record of driving sales growth, increasing brand ",
+      "publishedDate": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "title": "Fundwell Case Study | Google Cloud",
+      "url": "https://cloud.google.com/customers/fundwell",
+      "content": "Fundwell: Accelerating business funding with advanced AI models from Google Cloud Google Cloud Results Reduced underwriting team workload by 30 hours per week $22 million in funding earned through self-serve customer portal Funds disbursed to businesses in as little as 24 hours 83% reduction in time to onboard customers to custom web app $76.6% year-over-year growth in onboarded customers supported by Google Cloud Fundwell leverages Google Cloud to connect businesses with funders and provide fun",
+      "publishedDate": "2025-04-24T00:00:00.000Z"
+    },
+    {
+      "title": "OmniAI. Automate document workflows",
+      "url": "https://getomni.ai/",
+      "content": "Why OmniAI\n\n## Accelerate borrower onboarding and follow-ups in one thread\n\n## We optimize document workflows for businesses\n\nCollect responses through conversation and complete requirements 70% faster.\n\nCollect responses through conversation and complete requirements 70% faster.\n\nConversational onboarding\n\nBorrowers reply by SMS or email. OmniAI reads, verifies, and autofills every field — reducing friction and drop-off automatically.\n\n4x\n\nFaster borrower onboarding\n\nConversational onboarding\n\n",
+      "publishedDate": "2025-07-08T16:04:15.000Z"
+    },
+    {
+      "title": "A Media Mogul Pivots to Paper",
+      "url": "https://www.newyorker.com/magazine/2023/01/02/a-media-mogul-pivots-to-paper?irclickid=1YHRt2RpmxyNTKjzqSRHw3BJUkAw6p39yWrPTQ0&irgwc=1&source=affiliate_impactpmx_12f6tote_desktop_adgoal%20GmbH",
+      "content": "[Skip to main content](https://www.newyorker.com/magazine/2023/01/02/a-media-mogul-pivots-to-paper?irclickid=1YHRt2RpmxyNTKjzqSRHw3BJUkAw6p39yWrPTQ0&irgwc=1&source=affiliate_impactpmx_12f6tote_desktop_adgoal%20GmbH#main-content)\n\nSave this storySave this story\n\nSave this storySave this story\n\nIn the old days—the days of the sidewalk shoeshine, the days of the pay phone—a New Yorker could buy an evening edition of the _Times_ or the _Post_ from a metal news box and read it on the subway home. No ",
+      "publishedDate": "2023-01-02T00:00:00.000Z"
+    },
+    {
+      "title": "ADAM YANALUNAS | LinkedIn",
+      "url": "https://www.linkedin.com/company/adam-yanalunas",
+      "content": "## Individual and Family Services\n\n[Follow](https://www.linkedin.com/login?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fcompany%2Fadam-yanalunas&fromSignIn=true&trk=top-card_top-card-secondary-button-top-card-secondary-cta)\n\n- [Report this company](https://www.linkedin.com/uas/login?fromSignIn=true&session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fadam-yanalunas&trk=top-card_ellipsis-menu-semaphore-sign-in-redirect&guestReportContentType=COMPANY&_f=guest-reporting)\n\n## About u",
+      "publishedDate": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "title": "ADAM ZANI | LinkedIn",
+      "url": "https://www.linkedin.com/company/adam-zani",
+      "content": "## About us\n\nIndustryMedical Practices\n\nCompany size2-10 employees\n\nHeadquartersOceanside, California\n\n## Locations\n\n- 316 TAEGU CT\n\n\n\nOceanside, California 92058, us\n\n\n[Get directions](https://www.bing.com/maps?where=316+TAEGU+CT+Oceanside+92058+California+US&trk=org-locations_url)",
+      "publishedDate": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "title": "Adam Bozanich - Age, Phone Number, Address, Contact Info, Public Records",
+      "url": "https://radaris.com/p/Adam/Bozanich/",
+      "content": "# Adam Bozanich\n\nSave this page\n\n[Background Search with BeenVerified](https://radaris.com/srv/click?l=6bE38bon3ZWxnhYjahDFSzT8Kc0FVJVx%2F%2BThACH8HCszTM2%2B%2Bpu4MFjT9hIYkmilkiEVKm5wKmAUqBzTevVn1C%2FghGHKym9xVkFSkf6wl43rYYnvETjyfEl4aypSKRUpdhMdT1PSFu3aMoHCo8XH6QJ4Z6okdiD77Ys2mHmQGjw4fj9tZZH9iZBabtVDI2Qdrv42gh9DC1gxWIOwL55MTRKQHqT24ZGnjTnOD0vbx%2BpZ9%2Fq%2F1gl5HhEpsw6K5kJcWygl2CzJfTPIBbxYV%2B9r6vQf7pB64B1KF4go5of7dN4T4NS5LfUO2IdWksnEJsgQzFQLV%2BIqRO8l4dwKuujSQeGDFgBc2zezRg5HwmkzDRyz94ru1Kc9q4hpC",
+      "publishedDate": "2025-01-20T00:00:00.000Z"
+    },
+    {
+      "title": "Adam Wonus Address & Phone Number | Whitepages People Search",
+      "url": "https://www.whitepages.com/name/Adam-Wonus",
+      "content": "![Whitepages](https://www.whitepages.com/static/images/svg/wp_logo.svg)\n\nTo view results, please agree to our Terms of Service.\n\nI agree to the [Terms of Service](https://www.whitepages.com/terms-of-service) and [Privacy Policy.](https://www.whitepages.com/privacy)\n\nContinue to Results\n\nFilter by state\n\n- [Florida (1)](https://www.whitepages.com/name/Adam-Wonus/FL)\n\nFilter by age\n\n- [All Ages](https://www.whitepages.com/name/Adam-Wonus?)\n- [18-29](https://www.whitepages.com/name/Adam-Wonus?maxAg"
+    },
+    {
+      "title": "ADAM MARTIN ZOLONZ | LinkedIn",
+      "url": "https://www.linkedin.com/company/adam-martin-zolonz",
+      "content": "\n \n \nAbout us\n \n \n \n \n \nCompany size\n \n \n2-10 employees\n \n \n \n \nHeadquarters\n \n \nLos Angeles, California\n \n \n \n \n \n \n \nLocations\n \n \n \n \n \n \n1680 VINE ST\n \n \nLos Angeles, California 90028, us\n \n \n \nGet directions\n \n \n \n \n \n",
+      "publishedDate": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "title": "ADAM JEREMIAH KUZMIAK | Linkedin",
+      "url": "https://www.linkedin.com/company/adam-jeremiah-kuzmiak",
+      "content": "ADAM JEREMIAH KUZMIAK\nSlogan: N/A\nNumber of followers: N/A\nOverview: N/A\nWebsite: N/A\nIndustry: Medical Practices\nEmployees: 2-10\nLocation: Anthem, Arizona, US\nAddresses: 3724 W ASHTON CT Anthem, Arizona 85086, us\nFounded: N/A\nSpecialties: N/A",
+      "publishedDate": "2025-01-01T00:00:00.000Z"
+    }
+  ],
+  "summary": {
+    "totalSearches": 2,
+    "enrichmentTasks": 4,
+    "directSearchResults": 10,
+    "phoneEnrichmentRequested": true,
+    "emailEnrichmentRequested": true
+  }
+}

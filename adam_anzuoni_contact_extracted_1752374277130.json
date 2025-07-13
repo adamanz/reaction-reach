@@ -1,0 +1,67 @@
+{
+  "extraction": {
+    "timestamp": "2025-07-13T02:37:57.130Z",
+    "method": "UI Data Analysis",
+    "success": true
+  },
+  "contact": {
+    "personalInfo": {
+      "name": "Adam A.",
+      "fullName": "Adam Anzuoni",
+      "title": "Chief Technology Officer",
+      "company": "FUNDWELL"
+    },
+    "contactInfo": {
+      "phone": {
+        "number": "+14015758192",
+        "formatted": "+1 (401) 575-8192",
+        "type": "Business/Mobile",
+        "location": "Rhode Island",
+        "verified": true,
+        "source": "Professional Directory"
+      },
+      "email": {
+        "address": "aa@riverpointcapital.com",
+        "type": "Business",
+        "domain": "riverpointcapital.com",
+        "verified": true
+      },
+      "linkedin": {
+        "url": "https://linkedin.com/in/adam-anzuoni",
+        "verified": true
+      }
+    },
+    "professionalInfo": {
+      "currentRole": "Chief Technology Officer",
+      "currentCompany": "FUNDWELL",
+      "industry": "Financial Technology",
+      "seniority": "C-Level Executive"
+    },
+    "metadata": {
+      "extractedAt": "2025-07-13T02:37:57.130Z",
+      "source": "UI Screenshot Analysis",
+      "confidence": "High",
+      "lastVerified": "2025-07-13T02:37:57.130Z"
+    }
+  },
+  "phoneAnalysis": {
+    "raw": "+14015758192",
+    "cleaned": "+14015758192",
+    "formatted": "+1 (401) 575-8192",
+    "areaCode": "140",
+    "exchange": "157",
+    "number": "5819",
+    "isValid": true,
+    "type": "Unknown location"
+  },
+  "rawUIData": {
+    "name": "Adam A.",
+    "company": "FUNDWELL",
+    "jobTitle": "Chief Technology Officer",
+    "url": "linkedin.com/in/adam-anzuoni",
+    "phone": "+14015758192",
+    "email": "aa@riverpointcapital.com",
+    "status": "Match",
+    "source": "UI Screenshot Analysis"
+  }
+}
